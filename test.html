@@ -1,0 +1,98 @@
+<html>
+  <head>
+    <style>
+      body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+      }
+
+      #chart {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+    <meta charset="utf-8" />
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="d3.darwin.js" charset="utf-8"></script>
+  </head>
+  <body></body>
+
+  <script type="text/javascript">
+    var skills = [
+      {
+        id: "e7bfd8b5-4f1b-4800-801a-205184a80776",
+        name: "Boytoy",
+        description: "be a good boy toy to earn points in this category",
+        title: "Boytoyer",
+        levels: [0, 1, 5, 10, 20, 50],
+        unit: "points",
+        parents: ["fdd621ac-50d5-4ad2-b098-24140bd44099"],
+        points: 0,
+        last_achieved: 1672640648,
+        starred: false,
+      },
+      {
+        id: "f31b947c-768c-4509-84a0-171a35d02e95",
+        name: "Movement",
+        description: "Movement Node, go outside to consider this valid.",
+        title: "Mover",
+        levels: [0, 1, 5, 10, 20, 50],
+        unit: "points",
+        parents: ["fdd621ac-50d5-4ad2-b098-24140bd44099"],
+        points: 0,
+        last_achieved: 0,
+        starred: false,
+      },
+      {
+        id: "f7822d60-d71d-4868-bad7-f1f885631936",
+        name: "Project",
+        description: "Work on projects to earn points in this category",
+        title: "Projecter",
+        levels: [0, 1, 5, 10, 20, 50],
+        unit: "points",
+        parents: ["fdd621ac-50d5-4ad2-b098-24140bd44099"],
+        points: 0,
+        last_achieved: 1672770296,
+        starred: false,
+      },
+      {
+        id: "fdd621ac-50d5-4ad2-b098-24140bd44099",
+        name: "Arjun",
+        description: "Me",
+        title: "Arjun",
+        levels: [0, 1, 5, 10, 20, 50, 100, 1000, 10000],
+        unit: "points",
+        parents: [],
+        points: 0,
+        last_achieved: 0,
+        starred: false,
+      },
+    ];
+    // make a canvas element
+    var canvas = document.createElement("canvas");
+    canvas.style.width = "100%";
+    canvas.style.height = "100%";
+    canvas.id = "the-canvas";
+    document.body.appendChild(canvas);
+
+    // create the darwin object
+    var darwin = d3
+      .darwin()
+      .skills(skills)
+      .height(document.body.offsetHeight)
+      .width(document.body.offsetWidth)
+      .canvas(canvas);
+
+    // setup a listener to listen for resize events and update height and width when that happens
+    window.addEventListener("resize", function () {
+      darwin
+        .height(document.body.offsetHeight)
+        .width(document.body.offsetWidth);
+      darwin();
+    });
+
+    // run the darwin object
+    darwin();
+  </script>
+</html>

@@ -1,16 +1,19 @@
 {
-  "name": "d3-network",
+  "name": "d3-darwin",
   "version": "0.5.0",
-  "description": "This is a d3-based gene network visualization.",
-  "main": "d3.network.js",
+  "description": "This is a d3-based skill tree visualize.",
+  "main": "d3.darwin.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aaronkw/d3-network.git"
+    "url": "git+https://github.com/arjungandhi/d3-darwin.git"
   },
-  "author": "Aaron Wong, Dongbo Hu",
-  "license": "BSD 3-Clause",
+  "author": "Arjun Gandhi",
+  "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/aaronkw/d3-network/issues"
+    "url": "https://github.com/arjungandhi/d3-darwin/issues"
   },
-  "homepage": "https://github.com/aaronkw/d3-network#readme"
+  "homepage": "https://github.com/arjungandhi/d3-darwin#readme",
+  "devDependencies": {
+    "prettier": "^2.8.2"
+  }
 }

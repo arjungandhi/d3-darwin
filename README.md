@@ -1,6 +1,6 @@
-# d3-network
+# d3-darwin
 
-This is a d3-based gene network visualization. The module is a wrapper for a d3 force-directed layout but customized for visuzalizing weighted gene networks.
+This is a d3-based visualization for the darwin library.
 
 ## Usage
 
@@ -10,13 +10,13 @@ Add the js file:
 
 
 ```html
-<script src="d3.network.js" charset="utf-8"></script>`
+<script src="d3.darwin.js" charset="utf-8"></script>`
 ```
 
 Create the network:
 
 ```js
-var network = d3.network()
+var network = d3.darwin()
 	.genes(data.genes)
 	.edges(data.edges);
 d3.select("#chart")
