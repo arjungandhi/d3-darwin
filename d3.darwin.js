@@ -320,7 +320,7 @@
             .id(function (d) {
               return d.id;
             })
-            .distance(40 * scale())
+            .distance(30 * scale())
         )
         .force("charge", d3.forceManyBody().strength(-500 * scale()))
         .force("center", d3.forceCenter(width / 2, height / 2))
