@@ -6,11 +6,6 @@
         height: 100%;
         margin: 0;
       }
-
-      #chart {
-        width: 100%;
-        height: 100%;
-      }
     </style>
     <meta charset="utf-8" />
     <script src="https://d3js.org/d3.v7.min.js"></script>
@@ -26,9 +21,9 @@
         description: "be a good boy toy to earn points in this category",
         title: "Boytoyer",
         levels: [0, 1, 5, 10, 20, 50],
-        unit: "points",
+        unit: "gf points",
         parents: ["fdd621ac-50d5-4ad2-b098-24140bd44099"],
-        points: 0,
+        points: 4,
         last_achieved: 1672640648,
         starred: false,
       },
@@ -66,14 +61,13 @@
         parents: [],
         points: 0,
         last_achieved: 0,
-        starred: false,
+        starred: true,
       },
     ];
     // make a canvas element
     var canvas = document.createElement("canvas");
     canvas.style.width = "100%";
     canvas.style.height = "100%";
-    canvas.id = "the-canvas";
     document.body.appendChild(canvas);
 
     // create the darwin object
