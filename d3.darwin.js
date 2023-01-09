@@ -290,10 +290,12 @@
         tick();
       },
       onSkillClick = (skill) => {
+        // set the selected skill
+        v = !skill.selected;
         for (s of skills) {
           s.selected = false;
         }
-        skill.selected = true;
+        skill.selected = v;
       },
       onSkillHover = (skill) => {};
 
