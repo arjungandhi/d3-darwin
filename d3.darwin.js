@@ -157,7 +157,7 @@
         y = y + context.measureText(text).actualBoundingBoxAscent;
         context.fillText(text, x, y);
 
-        nextLevelidx = Math.min(level, skill.levels.length - 1);
+        nextLevelidx = Math.min(level + 1, skill.levels.length - 1);
 
         // write a progress bar
         y = y + 5 * scale();
