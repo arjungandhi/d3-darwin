@@ -156,9 +156,12 @@
         y = y + context.measureText(text).actualBoundingBoxAscent;
         context.fillText(text, x, y);
 
+        nextLevelidx = Math.min(level, skill.levels.length - 1);
+
         // write a progress bar
         y = y + 5 * scale();
-        end_text = skill.points + "/" + skill.levels[level] + " " + skill.unit;
+        end_text =
+          skill.points + "/" + skill.levels[nextLevelidx] + " " + skill.unit;
         progress_width = 100 * scale() - context.measureText(end_text).width;
         progress_height = 8 * scale();
         text_y = context.measureText(end_text).actualBoundingBoxAscent;
@@ -170,7 +173,7 @@
         context.fillStyle = colors["nord-800"];
         context.fill();
         // calculate progress
-        progress = skill.points / skill.levels[level];
+        progress = skill.points / skill.levels[nextLevelidx];
         progress = Math.min(progress, 1);
 
         // draw the progress rectangle in
