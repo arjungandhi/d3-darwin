@@ -149,6 +149,7 @@
             level++;
           }
         }
+        level = level - 1; // we start at 0 points
         level = Math.min(level, skill.levels.length);
 
         // write the level
