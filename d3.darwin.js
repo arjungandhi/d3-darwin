@@ -320,13 +320,13 @@
             .id(function (d) {
               return d.id;
             })
-            .distance(30 * scale())
+            .distance(40 * scale())
         )
-        .force("charge", d3.forceManyBody().strength(-10 * scale()))
+        .force("charge", d3.forceManyBody().strength(-500 * scale()))
         .force("center", d3.forceCenter(width / 2, height / 2))
         .force(
           "collide",
-          d3.forceCollide().radius(() => 5 * scale())
+          d3.forceCollide().radius((d) => d.radius * 1.25 * scale())
         )
         .on("tick", tick);
 
