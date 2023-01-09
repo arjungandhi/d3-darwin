@@ -235,7 +235,10 @@
         }
       }, // end writeSelected
       scale = () => {
-        return (2.5 * width * height) / (1920 * 1080);
+        // my scren looks reasonable at this size dont go smaller
+        // you have to go pretty unreasobabley small to break stuff
+        //
+        return Math.max(2.5, (2.5 * width * height) / (1920 * 1080));
       },
       click = (event) => {
         // iterate over all nodes to find the one that was clicked
